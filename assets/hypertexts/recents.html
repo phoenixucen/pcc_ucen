@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PCC latest</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="../Styles/styleForRecent.css">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('../images/forestbridge.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+body{
+    background-image: url('../images/forestbridge.jpg');
+    background-position: fixed;
+}
+</style>
+</head>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    <img width="70vw" src="../images/PhoenixCode.png" alt="Logo">
+  </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">Solutions for Recent Contests</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">The solutions for all contests in previous sessions are documented in this page. <br>
+        Please note that the given solutions are some of many approaches.
+    </p>
+  </div>
+  <div class="w3-display-middle">
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">  </p>
+  </div>
+</div>
+    
+<div class="contest">
+  <div class="title" onclick="toggleDetails(document.getElementById('details1'))">
+    <span class="left-align"> Week 01 sept--01</span>
+    <span class="right-align"> SEPT 02 - SEPT 09 2023</span>
+  </div>
+  <div class="details" id="details1">
+    <!-- Contest 01 Details Here -->
+    <ul>
+        <li onclick="clicked(this)">1. Fizz and Buzz 2<div></div></li>
+        <li onclick="clicked(this)">2. Make it Odd 1<div></div></li>
+        <li onclick="clicked(this)">3. Small triangles, Large triangles<div></div></li>
+        <li onclick="clicked(this)">4. Capitalize 5<div></div></li>
+        <li onclick="clicked(this)">5. Printing pattern using loops<div></div></li>
+        <li onclick="clicked(this)">6. Upper triangle of 2D array<div></div></li>
+    </ul>
+  </div>
+</div>
+
+<div class="contest">
+  <div class="title" onclick="toggleDetails(document.getElementById('details2'))">  <span class="left-align"> REVITALIZE</span>
+    <span class="right-align">  MARCH 2023</span></div>
+  <div class="details" id="details2">
+    <!-- Contest 02 Details Here -->
+    Details for Contest REVITALIZE go here.
+  </div>
+</div>
+
+<script src="../Script/recentJs.js"></script>
+</body>
+</html>

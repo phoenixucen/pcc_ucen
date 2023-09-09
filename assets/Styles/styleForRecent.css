@@ -1,0 +1,58 @@
+.contest {
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    padding: 5px;
+  }
+
+  li:hover{
+    cursor: pointer;
+  }
+
+  li div:hover{
+    cursor:auto;
+  }
+  
+  .details {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: larger;
+    color: aliceblue;
+  }
+
+  .show{
+    display: block;
+  }
+
+  .questionImg, .ansText{
+    width: 45vw;
+  }
+
+  .ansText{
+    height: 50vh;
+  }
+  
+  .title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin: 5px 0;
+    background-color: paleturquoise;
+    padding: 4px 15px;
+    border-left: #162a92 solid 5px;
+    font-style: italic;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+  }
+  
+  .left-align {
+    text-align: left;
+  }
+  
+  .right-align {
+    text-align: right;
+  }
+  

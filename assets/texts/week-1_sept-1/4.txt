@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    char a[100];
+    int i,m;
+    gets(a);
+    m=strlen(a);
+    a[0]=toupper(a[0]);
+    for(i=0;i<m;i++){
+        if(a[i]==32){
+            a[i+1]=toupper(a[i+1]);
+            }
+        }
+    printf("%s",a);
+    return 0;
+}

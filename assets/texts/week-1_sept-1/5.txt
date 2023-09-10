@@ -70,3 +70,26 @@ int main()
       
     return 0;
 }
+
+----------------Approach_2-----------------
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int k,n;  
+    scanf("%d", &n);
+    for(int j =0;j < (2*n)-1; j++){
+        if(j>(n-1)){
+            k = (2*n)-j-2;
+        }
+        else k=j; 
+        for(int m =n;m>n-k;m--)
+            printf("%d ",m);
+        for(int r=0;r < (2*(n-k)-1);r++)
+            printf("%d ",n-k);
+        for(int m = n-k+1;m<n+1;m++)
+            printf("%d ",m);
+        printf("\n");
+    }
+    return 0;
+}

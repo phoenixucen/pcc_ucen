@@ -172,7 +172,7 @@ h3 {
 
 .quote {
   text-align: center;
-  text-decoration: overline underline;
+  /* text-decoration: overline underline; */
   font-size: 2rem;
   margin: 25px 0;
   background-color: paleturquoise;

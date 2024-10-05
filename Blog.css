@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 }
@@ -18,14 +19,61 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
+
+.header{
+  padding: 2rem 9%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.header .logo{
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.header .navbar a{
+  font-size: 1.7rem;
+  color: black;
+  margin-left: 2rem;
+}
+
+.header .navbar a:hover{
+  color: #7c6805;
+}
+
+.header #toggler{
+  display: none;
+}
+
+.header .fa-bars{
+  font-size: 2rem;
+  color:black;
+  border-radius: .5rem;
+  padding: .5rem 1.5rem;
+  cursor: pointer;
+  border:#7c6805;
+  display: none;
+}
+
+
+
 
 .inner {
   width: 100%;
   max-width: 800px;
   padding: 0px;
   margin: 0px;
+  margin-top: 100px;
   border-width: 2px;
   border-style: solid;
 }
@@ -296,6 +344,51 @@ body {
   font-style: italic;
 }
 
+/*blog-2-css*/
+
+.blog-2-heading {
+  color: gray;
+  font-size: 30px;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: orange;
+  border-left: none;
+  border-right: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.sub-heading {
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+}
+
+.sub-heading-desc {
+  font-size: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+}
+
+.game-start-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-start-1 {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-img {
+  width: 35%;
+  height: auto;
+}
+
 @media screen and (max-width: 840px) {
   .main-bg {
     padding: 10px;
@@ -328,4 +421,81 @@ body {
   .header-heading {
     font-size: 30px;
   }
+
+  .game-start-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .game-start-1 {
+    width: 100%;
+  }
+
+  .game-img {
+    width: 100%;
+  }
+
+  .blog-2-heading {
+    font-size: 18px;
+  }
 }
+
+
+
+/* Blog 3 */
+
+.web-blog{
+    padding:20px;
+}
+
+
+.web-blog h1{
+    line-height: 2rem;
+}
+
+ .web-blog-heading{
+    text-align: center;
+}
+
+.web-blog span{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* Nav Bar */
+
+
+@media (max-width: 1000px) {
+
+        .header .fa-bars {
+            display: block;
+        }
+    
+        .header .navbar {
+           position: absolute;
+           top: 100%;
+           left: 0;
+           right: 0;
+           background: #fff;
+           border-top: #7c6805;
+           clip-path: polygon(0 0,100% 0,100% 0,0 0);
+           transition: clip-path 0.5s ease-out;
+        }
+    
+        .header #toggler:checked ~ .navbar{
+            clip-path: polygon(0 0,100% 0,100% 100%,0% 100%);
+        }
+
+        .header .navbar a{
+            margin: 1.5rem;
+            padding: 1.5rem;
+            background: #fff;
+            border: #7c6805;
+            display: block;
+        }
+      }

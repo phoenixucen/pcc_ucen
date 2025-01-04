@@ -14,53 +14,53 @@ const landscapeMessage = document.getElementById("landscapeMessage");
 // Check orientation whenever the window is resized
 //window.addEventListener('resize', checkOrientation);
 
-document.getElementById("wipe-text").style.animation =
-  "wipeout 0.5s linear 2.1s";
-const texts = [
-  "RIDE",
-  "OWER",
-  "URPOSE",
-  "RINCIPLE",
-  "REPARATION",
-  "LANNING",
-  "RACTICE",
-  "RODUCTIVITY",
-  "ATIENCE",
-  "ERSEVERANCE",
-  "ROGRAMMING",
-  "HOENIX",
-];
-let i = 0;
-let toggle = false;
-setInterval(() => {
-  if (i < texts.length) {
-    document.getElementById("wipe-text").innerHTML = texts[i];
-    if (i == 11) {
-      document
-        .getElementsByClassName("wipe-container")[0]
-        .classList.toggle("orange");
-      document.getElementsByClassName("cc")[0].classList.toggle("orange");
-      toggle = true;
-    }
-    document.getElementById("wipe-text").style.animation =
-      "wipein 0.5s linear,wipeout 0.5s linear 1.6s";
-    setTimeout(() => {
-      document.getElementById("wipe-text").innerHTML = "";
-      document.getElementById("wipe-text").style.animation = "";
-      if (toggle) {
-        document
-          .getElementsByClassName("wipe-container")[0]
-          .classList.toggle("orange");
+function startTransition(){
+  document.getElementById("wipe-text").style.animation =
+    "wipeout 0.5s linear 2.1s";
+  const texts = [
+    "RIDE",
+    "OWER",
+    "URPOSE",
+    "RINCIPLE",
+    "REPARATION",
+    "LANNING",
+    "RACTICE",
+    "RODUCTIVITY",
+    "ATIENCE",
+    "ERSEVERANCE",
+    "ROGRAMMING",
+    "HOENIX",
+  ];
+  let i = 0;
+  let toggle = false;
+  setInterval(() => {
+    if (i < texts.length) {
+      document.getElementById("wipe-text").innerHTML = texts[i];
+      if (i == 11) {
+        document.getElementsByClassName("wipe-container")[0].classList.toggle("orange");
         document.getElementsByClassName("cc")[0].classList.toggle("orange");
-        toggle = false;
+        toggle = true;
       }
-    }, 2000);
-    i++;
-  } else {
-    i = 0;
-    document.getElementById("wipe-text").innerHTML = "HOENIX";
-  }
-}, 2100);
+      document.getElementById("wipe-text").style.animation =
+        "wipein 0.5s linear,wipeout 0.5s linear 1.6s";
+      setTimeout(() => {
+        document.getElementById("wipe-text").innerHTML = "";
+        document.getElementById("wipe-text").style.animation = "";
+        if (toggle) {
+          document
+            .getElementsByClassName("wipe-container")[0]
+            .classList.toggle("orange");
+          document.getElementsByClassName("cc")[0].classList.toggle("orange");
+          toggle = false;
+        }
+      }, 2000);
+      i++;
+    } else {
+      i = 0;
+      document.getElementById("wipe-text").innerHTML = "HOENIX";
+    }
+  }, 2100);
+}
 
 const sections = document.querySelectorAll(".dive-in");
 window.addEventListener("scroll", () => {

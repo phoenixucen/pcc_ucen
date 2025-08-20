@@ -2,6 +2,7 @@
 const imageList = [
     "20231115_134301.png",
     "IMG_COM_20231113_1355_22_7650.png",
+    "Picture4.png",
     "IMG_COM_20231113_1355_23_0001.jpg",
     "IMG-20231125-WA0005.jpg",
     "IMG-20231125-WA0006.jpg",

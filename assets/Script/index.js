@@ -21,13 +21,12 @@ function startTransition(){
     "RIDE",
     "OWER",
     "URPOSE",
-    "RINCIPLE",
-    "REPARATION",
-    "LANNING",
+    "ASSION",
+    "LAN",
     "RACTICE",
-    "RODUCTIVITY",
-    "ATIENCE",
     "ERSEVERANCE",
+    "RECISION",
+    "ROGRESS",
     "ROGRAMMING",
     "HOENIX",
   ];
@@ -36,7 +35,7 @@ function startTransition(){
   setInterval(() => {
     if (i < texts.length) {
       document.getElementById("wipe-text").innerHTML = texts[i];
-      if (i == 11) {
+      if (i == 10) {
         document.getElementsByClassName("wipe-container")[0].classList.toggle("orange");
         document.getElementsByClassName("cc")[0].classList.toggle("orange");
         toggle = true;

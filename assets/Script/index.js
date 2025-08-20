@@ -71,3 +71,35 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebar = document.getElementById('mobile-sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+
+    function openSidebar() {
+        sidebar.classList.add('active');
+        overlay.classList.add('active');
+        sidebarToggle.style.color = '#000'; // Change color when sidebar is open
+    }
+    function closeSidebar() {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+        sidebarToggle.style.color = '#fff'; // Change color when sidebar is open
+    }
+
+    sidebarToggle.addEventListener('click', function() {
+        if (sidebar.classList.contains('active')) {
+            closeSidebar();
+        } else {
+            openSidebar();
+        }
+    });
+
+    overlay.addEventListener('click', closeSidebar);
+
+    // Optionally close sidebar when a link is clicked
+    sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeSidebar);
+    });
+});

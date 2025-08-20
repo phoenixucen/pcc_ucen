@@ -1,7 +1,7 @@
 // List your gallery images here (add more as needed)
 const imageList = [
-    "20231115_134301.heic",
-    "IMG_COM_20231113_1355_22_7650.jpg",
+    "20231115_134301.png",
+    "IMG_COM_20231113_1355_22_7650.png",
     "IMG_COM_20231113_1355_23_0001.jpg",
     "IMG-20231125-WA0005.jpg",
     "IMG-20231125-WA0006.jpg",

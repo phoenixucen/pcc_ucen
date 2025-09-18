@@ -11,6 +11,7 @@ const imageList = [
     "IMG-20240205-WA0007.jpg",
     "IMG-20240205-WA0009.jpg",
     "IMG-20240205-WA0010.jpg",
+    "PCC_Prizes_Prad_Akr_Mohan.jpg",
     "IMG-20240205-WA0011.jpg",
     "IMG-20240205-WA0012.jpg",
     "IMG-20240205-WA0014.jpg",

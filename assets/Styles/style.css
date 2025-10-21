@@ -122,13 +122,15 @@ li a {
 
 li a:hover {
   background-color: #e2e2e2;
+  text-decoration: underline;
+  color: #e75208;
 }
 
 #sticky-navbar {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  margin-top: 1vh;
+
   z-index: 1;
   padding: 5px;
   background-color: #f3f3f3;
@@ -136,6 +138,7 @@ li a:hover {
   border: 2px solid #e75208;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
+  background: linear-gradient(to right, #c80cc8, #eb5104);
 }
 
 h2 {
@@ -237,6 +240,7 @@ h3 {
   border: 1px solid #ccc;
   border-radius: 5px;
   height: 300px;
+  background: linear-gradient(to right, orange, rgb(235, 43, 43));
 }
 
 .box-heading {
@@ -264,7 +268,7 @@ h3 {
   /* background-color: rgb(251, 216, 216); */
   font-family: "Caudex", serif;
   opacity: 0;
-  border-radius: px;
+  border-radius: 8px;
   border: 1px double rgb(237, 108, 108);
   animation: fadeIn 1s ease forwards;
 }
@@ -322,93 +326,95 @@ h3 {
 
 /* Hide navbar only on small screens */
 @media (max-width: 768px) {
-    #sticky-navbar {
-        display: none !important;
-    }
-    .mobile-only {
-        display: block !important;
-    }
-    #mobile-sidebar {
-        display: block;
-    }
+  #sticky-navbar {
+    display: none !important;
+  }
+  .mobile-only {
+    display: block !important;
+  }
+  #mobile-sidebar {
+    display: block;
+  }
 }
 @media (min-width: 769px) {
-    #mobile-sidebar,
-    .sidebar-overlay {
-        display: none !important;
-    }
+  #mobile-sidebar,
+  .sidebar-overlay {
+    display: none !important;
+  }
 }
 
 /* Sidebar styles */
 .sidebar {
-    position: fixed;
-    top: 0;
-    left: -260px;
-    width: 220px;
-    height: 100%;
-    background: linear-gradient(135deg, #f8fafc 60%, #e0e7ff 100%);
-    box-shadow: 2px 0 16px rgba(0,0,0,0.12);
-    z-index: 1001;
-    transition: left 0.3s;
-    padding-top: 60px;
-    border-top-right-radius: 16px;
-    border-bottom-right-radius: 16px;
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 220px;
+  height: 100%;
+  background: linear-gradient(135deg, #f8fafc 60%, #e0e7ff 100%);
+  box-shadow: 2px 0 16px rgba(0, 0, 0, 0.12);
+  z-index: 1001;
+  transition: left 0.3s;
+  padding-top: 60px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
 .sidebar.active {
-    left: 0;
+  left: 0;
 }
 .sidebar ul {
-    list-style: none;
-    padding: 0 0 0 10px;
-    margin: 0;
+  list-style: none;
+  padding: 0 0 0 10px;
+  margin: 0;
 }
 .sidebar ul li {
-    margin: 18px 0;
+  margin: 18px 0;
 }
 .sidebar ul li a {
-    color: #222;
-    text-decoration: none;
-    font-size: 1.08em;
-    padding: 12px 18px;
-    border-radius: 8px;
-    transition: background 0.2s, color 0.2s;
-    display: flex;
-    align-items: center;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
+  color: #222;
+  text-decoration: none;
+  font-size: 1.08em;
+  padding: 12px 18px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
 }
 .sidebar ul li a:hover,
 .sidebar ul li a.active {
-    background: #6366f1;
-    color: #fff;
-    box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+  background: #6366f1;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
 }
 
 /* Sidebar toggle button */
 #sidebar-toggle {
-    position: fixed;
-    top: 18px;
-    left: 18px;
-    z-index: 1100;
-    font-size: 2em;
-    background: none;
-    border: none;
-    cursor: pointer;
-    /* display: none; */
-    color: #fff;
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 1100;
+  font-size: 2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* display: none; */
+  color: #fff;
 }
 
 /* Overlay styles */
 .sidebar-overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
-    background: rgba(0,0,0,0.18);
-    z-index: 1000;
-    display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.18);
+  z-index: 1000;
+  display: none;
 }
 .sidebar-overlay.active {
-    display: block;
+  display: block;
 }
 
 @media screen and (min-width: 1100px) {
@@ -461,5 +467,26 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+}
+.dive-in {
+  background: linear-gradient(to right, white, rgb(255, 192, 192));
+}
+@media (max-width: 768px) {
+  #sticky-navbar {
+    display: none;
+  }
+  #sidebar-toggle {
+    display: block;
+  }
+  #mobile-sidebar {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  #mobile-sidebar,
+  .sidebar-overlay {
+    display: none !important;
   }
 }

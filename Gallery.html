@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/Styles/gallery.css">
     <link href="https://fonts.googleapis.com/css2?family=Caudex:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f9df02bf03.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="assets/images/PhoenixCode.png">
 
     <style>
         /* Footer Styles */
@@ -37,14 +38,73 @@
             font-family: 'Caudex', serif;
             color: #ffd27f;
         }
+
+        .gallery-header {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(135deg, #ff7f50 0%, #1b1b1b 100%);
+    padding: 60px 20px 40px;
+    font-family: 'Caudex', serif;
+    overflow: hidden;
+}
+
+.gallery-header .overlay {
+    position: relative;
+    z-index: 2;
+}
+
+.gallery-header h1 {
+    font-size: 2.4rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.gallery-header .fa-images {
+    color: #ffd27f;
+    margin-right: 10px;
+}
+
+.gallery-subtitle {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color: #f5f5f5;
+    letter-spacing: 0.5px;
+}
+
+.accent-bar {
+    width: 80px;
+    height: 4px;
+    background-color: #ffd27f;
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+@media (max-width: 600px) {
+    .gallery-header {
+        padding: 40px 15px;
+    }
+    .gallery-header h1 {
+        font-size: 1.8rem;
+    }
+    .gallery-subtitle {
+        font-size: 0.95rem;
+    }
+}
+
     </style>
 </head>
 
 <body>
     <header class="gallery-header">
-        <h1><i class="fa fa-images"></i> PCC UCEN Gallery</h1>
-        <p class="gallery-subtitle">Moments, Memories & Achievements</p>
+        <div class="overlay">
+            <h1><i class="fa fa-images"></i> PCC UCEN Gallery</h1>
+            <p class="gallery-subtitle">Moments, Memories & Achievements</p>
+            <div class="accent-bar"></div>
+        </div>
     </header>
+
 
     <main>
         <div id="gallery-grid" class="gallery-grid"></div>

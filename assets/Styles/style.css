@@ -32,27 +32,32 @@ header {
   color: white;
   font-size: 3vw;
 }
+
 html {
   background-color: #f9f9f9;
   scroll-behavior: smooth;
   background: url("../images/codeScreen.jpg");
 }
+
 .center img {
   width: 25vw;
   padding-bottom: 0;
 }
+
 #single-home-button a {
   color: white;
   text-decoration: none;
   position: fixed;
   margin: 4vh 4vw;
 }
+
 .center {
   padding-top: 5vh;
   color: white;
   display: flex;
   justify-content: center;
 }
+
 .cc {
   margin-top: 2vh;
 }
@@ -60,6 +65,7 @@ html {
 .lead-line {
   font-size: 1.5vw;
 }
+
 .orange {
   color: #fd841f;
   text-shadow: 0.5px 0.5px #ff0000;
@@ -101,6 +107,7 @@ html {
     transform: translateY(-100%);
   }
 }
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -127,14 +134,11 @@ li a:hover {
 }
 
 #sticky-navbar {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
-
   z-index: 1;
   padding: 5px;
   background-color: #f3f3f3;
-  /* background-image: linear-gradient(to right, white , #white); */
   border: 2px solid #e75208;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
@@ -148,34 +152,36 @@ h2 {
   font-weight: 400 !important;
   letter-spacing: 0.5px;
 }
+
 h3 {
   font-family: "Forum", cursive;
   text-decoration: underline;
 }
+
 #vision-mission p,
 #contact p,
 #about p {
   font-family: "Lato", sans-serif;
   font-weight: 600;
 }
+
 .center-text {
   text-align: center;
   font-size: 1.5rem;
 }
+
 #vision-mission,
 #contact,
 #about {
-  background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 20px;
   margin: 20px 0;
   border-radius: 7px;
-  /* font-weight: 600; */
-  backdrop-filter: blur(20px); /* Adjust the blur intensity as needed */
+  backdrop-filter: blur(20px);
 }
 
 .quote {
   text-align: center;
-  /* text-decoration: overline underline; */
   font-size: 2rem;
   margin: 25px 0;
   background-color: paleturquoise;
@@ -201,71 +207,58 @@ h3 {
   flex-wrap: wrap;
 }
 
-/*.boxers1,
-.boxers2 {
-  display: flex;
-  text-align: center;
-  font-size: large;
-  justify-content: center;
-}
-
-.boxer1 {
-  max-width: 33%;
-  padding: 20px;
-  margin: 30px;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-.boxer2 {
-  max-width: 50%;
-  padding: 20px;
-  margin: 30px;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}*/
-.boxer1:hover,
-.box:hover,
-.boxer2:hover {
-  background-color: #ccc;
-}
-
+/* Card hover highlight effect */
 .box {
   min-width: 200px;
   max-width: 30%;
   padding: 20px;
   margin: 15px;
-  background-color: white;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   height: 300px;
   background: linear-gradient(to right, orange, rgb(235, 43, 43));
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transform: translateY(0);
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(255, 140, 0, 0.4),
+              0 0 25px rgba(255, 94, 0, 0.3);
+  border: 1px solid #ff8c00;
+  background: linear-gradient(to right, #ffb347, #ffcc33);
+  color: #1a1a1a;
+  cursor: pointer;
+}
+
+.box:hover h3 {
+  color: #d84315;
+  transition: color 0.3s ease;
+}
+
+.box:hover p {
+  color: #212121;
+  transition: color 0.3s ease;
 }
 
 .box-heading {
   text-align: center;
 }
 
-/* .boxer1{
-   experimenting 
-  -webkit-box-flex: 0;
-  flex: 0 0 33.33333%;
-  max-width: 33.33333%;
-} */
-
+/* Tiles */
 .make-3-tiles {
   display: flex;
-
-  justify-content: center; /* Center align the boxes horizontally */
+  justify-content: center;
   width: 100%;
 }
+
 .tile {
   width: 33%;
   text-align: center;
   margin: 10px;
   background-color: #162a92;
-  /* background-color: rgb(251, 216, 216); */
   font-family: "Caudex", serif;
   opacity: 0;
   border-radius: 8px;
@@ -274,15 +267,15 @@ h3 {
 }
 
 .tile:nth-child(1) {
-  animation-delay: 0.5s; /* Delay the animation for the first box */
+  animation-delay: 0.5s;
 }
 
 .tile:nth-child(2) {
-  animation-delay: 1.5s; /* Delay the animation for the second box */
+  animation-delay: 1.5s;
 }
 
 .tile:nth-child(3) {
-  animation-delay: 2.5s; /* Delay the animation for the third box */
+  animation-delay: 2.5s;
 }
 
 @keyframes fadeIn {
@@ -298,123 +291,128 @@ h3 {
   transition: opacity 0.5s, transform 0.5s;
   opacity: 0;
   transform: translateY(20%);
+  background: linear-gradient(to right, white, rgb(255, 192, 192));
 }
 
-#register {
-  text-align: center;
-  padding: 5px;
-  position: relative;
-  font-size: large;
-  background-color: #f2f2f2;
-}
-.contact {
-  text-align: center;
-  padding: 5px;
-  position: relative;
-  bottom: 0;
-  font-size: large;
+/* Footer Modern Design */
+.footer-modern {
+  background: linear-gradient(135deg, #0d0d0d, #3c0a6b, #e75208);
+  color: #f5f5f5;
+  padding: 50px 20px 20px;
+  font-family: 'Lato', sans-serif;
 }
 
-.copyright {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 5px;
-  position: relative;
-  bottom: 0;
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Hide navbar only on small screens */
+.footer-section {
+  flex: 1 1 250px;
+  margin: 15px;
+  text-align: center;
+}
+
+.footer-section h3, .footer-section h4 {
+  color: #fff;
+  font-family: 'Caudex', serif;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.footer-section a {
+  display: block;
+  color: #bbb;
+  text-decoration: none;
+  margin: 6px 0;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-section a:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.footer-section i {
+  margin-right: 8px;
+  color: #ffb347;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 20px;
+  padding-top: 15px;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* ======= Responsive Rules ======= */
 @media (max-width: 768px) {
   #sticky-navbar {
-    display: none !important;
+    display: none;
   }
-  .mobile-only {
-    display: block !important;
+  #sidebar-toggle {
+    display: block;
   }
   #mobile-sidebar {
     display: block;
   }
+
+  /* Footer responsiveness */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
+/* Fix Connect section alignment */
+#register {
+  text-align: center;
+  padding: 40px 0;
+  background: linear-gradient(to right, #ffe0e0, #fff5f5);
+  border-top: 2px solid #ffb347;
+  border-bottom: 2px solid #ffb347;
+  font-family: "Lato", sans-serif;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+#register h3 {
+  font-family: "Caudex", serif;
+  font-size: 1.5rem;
+  color: #c0392b;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+#register a {
+  margin: 0 8px;
+  color: #0044cc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+#register a:hover {
+  color: #e67e22;
+}
+
+
 @media (min-width: 769px) {
   #mobile-sidebar,
   .sidebar-overlay {
     display: none !important;
   }
-}
-
-/* Sidebar styles */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -260px;
-  width: 220px;
-  height: 100%;
-  background: linear-gradient(135deg, #f8fafc 60%, #e0e7ff 100%);
-  box-shadow: 2px 0 16px rgba(0, 0, 0, 0.12);
-  z-index: 1001;
-  transition: left 0.3s;
-  padding-top: 60px;
-  border-top-right-radius: 16px;
-  border-bottom-right-radius: 16px;
-}
-.sidebar.active {
-  left: 0;
-}
-.sidebar ul {
-  list-style: none;
-  padding: 0 0 0 10px;
-  margin: 0;
-}
-.sidebar ul li {
-  margin: 18px 0;
-}
-.sidebar ul li a {
-  color: #222;
-  text-decoration: none;
-  font-size: 1.08em;
-  padding: 12px 18px;
-  border-radius: 8px;
-  transition: background 0.2s, color 0.2s;
-  display: flex;
-  align-items: center;
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
-}
-.sidebar ul li a:hover,
-.sidebar ul li a.active {
-  background: #6366f1;
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
-}
-
-/* Sidebar toggle button */
-#sidebar-toggle {
-  position: fixed;
-  top: 18px;
-  left: 18px;
-  z-index: 1100;
-  font-size: 2em;
-  background: none;
-  border: none;
-  cursor: pointer;
-  /* display: none; */
-  color: #fff;
-}
-
-/* Overlay styles */
-.sidebar-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.18);
-  z-index: 1000;
-  display: none;
-}
-.sidebar-overlay.active {
-  display: block;
 }
 
 @media screen and (min-width: 1100px) {
@@ -434,7 +432,6 @@ h3 {
     width: 40%;
     margin: 10px;
   }
-
   .lead-line {
     font-size: 15px;
   }
@@ -445,48 +442,22 @@ h3 {
     min-width: 100%;
     margin: 10px;
   }
-
   .about-heading {
     font-size: 30px;
   }
-
   .logo-img {
     min-width: 200px;
   }
-
   .lead-line {
     font-size: 15px;
   }
-
   .about-description {
     font-size: 16px;
   }
-
   .make-3-tiles {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-}
-.dive-in {
-  background: linear-gradient(to right, white, rgb(255, 192, 192));
-}
-@media (max-width: 768px) {
-  #sticky-navbar {
-    display: none;
-  }
-  #sidebar-toggle {
-    display: block;
-  }
-  #mobile-sidebar {
-    display: block;
-  }
-}
-
-@media (min-width: 769px) {
-  #mobile-sidebar,
-  .sidebar-overlay {
-    display: none !important;
   }
 }
